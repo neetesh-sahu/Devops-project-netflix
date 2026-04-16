@@ -1,0 +1,5 @@
+ami_id        = "ami-0ec10929233384c7f"
+instance_type = "t3.micro"
+key_name      = "new-day"
+instance_name = "terraform-ec2-demo"
+aws_region = "us-east-1"

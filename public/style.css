@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: white;
+  font-family: Arial;
+}
+
+.header {
+  padding: 15px;
+  background: black;
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.banner {
+  height: 300px;
+  background: url('https://picsum.photos/1200/300') center/cover;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.row {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.row img {
+  margin-right: 10px;
+  border-radius: 5px;
+}
