@@ -19,9 +19,8 @@ jobs:
         run: docker build -t neeteshsahu/netflix-clone .
 
       - name: Push to Docker Hub
-        run: |
-          docker push neeteshsahu/netflix-clone:latest
-          docker push neeteshsahu/netflix-clone:v1
+        run: docker push neeteshsahu/netflix-clone:latest
+         
 
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v0.1.6
