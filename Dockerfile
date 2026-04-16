@@ -2,9 +2,10 @@ FROM node:18
 
 WORKDIR /app
 
-# 🔥 direct sab copy karo (node_modules included)
-COPY . .
+COPY package*.json ./
 
-EXPOSE 3000
+RUN npm install
+
+COPY . .
 
 CMD ["node", "app.js"]
