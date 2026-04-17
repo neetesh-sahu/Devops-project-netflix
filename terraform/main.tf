@@ -58,3 +58,10 @@ resource "aws_security_group" "devops_sg" {
   }
 }
 
+data "aws_eip" "existing" {
+  id = "eipalloc-03ca820e24a4e52bb"
+}
+resource "aws_eip_association" "eip_assoc" {
+  instance_id   = aws_instance.this.id
+  allocation_id = data.aws_eip.existing.id
+}
