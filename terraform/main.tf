@@ -15,6 +15,7 @@ resource "aws_instance" "this" {
   instance_type = var.instance_type
   key_name      = var.key_name
   vpc_security_group_ids = [aws_security_group.devops_sg.id]
+  associate_public_ip_address = false
 
 user_data = <<-EOF
               #!/bin/bash
@@ -59,8 +60,9 @@ resource "aws_security_group" "devops_sg" {
 }
 
 data "aws_eip" "existing" {
-  id = "eipalloc-03ca820e24a4e52bb"
+  public_ip = "34.231.101.107"
 }
+
 resource "aws_eip_association" "eip_assoc" {
   instance_id   = aws_instance.this.id
   allocation_id = data.aws_eip.existing.id

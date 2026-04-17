@@ -3,9 +3,8 @@ output "instance_id" {
   value       = aws_instance.this.id
 }
 
-output "public_ip" {
-  description = "Public IP address of EC2"
-  value       = aws_instance.this.public_ip
+output "elastic_ip" {
+  value = data.aws_eip.existing.public_ip
 }
 output "public_dns" {
   description = "Public IP address of EC2"

@@ -2,8 +2,8 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main ]
-
+    paths: 
+      - 'index.html'
 jobs:
   deploy:
     runs-on: ubuntu-latest
